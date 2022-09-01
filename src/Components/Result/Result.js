@@ -8,15 +8,15 @@ const Result = ({word, full, fullHandle}) => (
         <th>Times</th>
       </tr>
       {word!==undefined && word!==null &&
-        word.map((e)=>(
-          <tr>
+        word.map((e) => (
+          <tr key={e[0]}>
             <td>{e[0]}</td>
             <td>{e[1]}</td>
           </tr>
         )).slice(0, full)
-      }
+        }
     </table>
-    <button onClick={fullHandle}>Show full list</button>
+    <button onClick={fullHandle} type="button">Show full list</button>
   </>
 );
 

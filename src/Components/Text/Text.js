@@ -16,8 +16,6 @@ const Text = (
       showCount
       maxLength={1000}
     />
-    <Button type="primary" onClick={findTopThree} className="button">Start</Button>
-    <Button onClick={clearHandle} className="button">Clear</Button>
   </>
 );
 

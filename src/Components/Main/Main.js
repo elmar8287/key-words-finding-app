@@ -1,8 +1,11 @@
 import React, {useState} from 'react';
 import Text from '../Text/Text';
 import Result from '../Result/Result';
+import 'antd/dist/antd.css';
+import { Button } from 'antd';
 
 const Main = () => {
+  const [display, setDisplay] = useState(false)
   const [value, setValue] = useState("")
   const textAreaHandle = (e) => {
     setValue(e.target.value)
@@ -10,7 +13,8 @@ const Main = () => {
 
   const [elmar, setElmar] = useState([])
   const findTopThree = () => {
-    let a = value
+    if(value) {
+      let a = value
       .toString()
       .replace(/[^\w\s]|_/g, "")
       .replace(/\s+/g, " ")
@@ -24,6 +28,7 @@ const Main = () => {
     const res = Array.from(Object.keys(map), key => [key, map[key]]);
     res.sort((a, b) => b[1] - a[1]);
     setElmar([res])
+    }
   };
 
   const [full, setFull] = useState(7)
@@ -38,9 +43,14 @@ const Main = () => {
 
   return (
     <div>
-      <h1>Paste the text and click to start button</h1>
+      <h1 className="title">Find your key words </h1>
       <Text textAreaHandle={textAreaHandle} value={value} findTopThree={findTopThree} clearHandle={clearHandle} /> 
-      <Result word={elmar[0]} full={full} fullHandle={fullHandle}/> 
+      <Button type="primary" onClick={() => {findTopThree(); setDisplay(true)}} className="button">Start</Button>
+      <Button onClick={() => {clearHandle(); setDisplay(false)}} className="button">Clear</Button>
+      {
+        display && value &&
+        <Result word={elmar[0]} full={full} fullHandle={fullHandle} />
+      }
     </div>
   );
 };

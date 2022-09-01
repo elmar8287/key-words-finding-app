@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-
+import Text from '../Text/Text';
+import Result from '../Result/Result';
 
 const Main = () => {
-
   const [value, setValue] = useState("")
   const textAreaHandle = (e) => {
     setValue(e.target.value)
@@ -25,16 +25,6 @@ const Main = () => {
     res.sort((a, b) => b[1] - a[1]);
     setElmar([res])
   };
-  // const [find, setFind] = useState("Hello")
-  // const longLength = () => {
-  //   let arr = elmar[0]
-  //   let longest = arr.sort(
-  //       function (a, b) {
-  //           return b.length - a.length;
-  //       }
-  //   )[0];
-  //     setFind(longest)
-  // }
 
   const [full, setFull] = useState(7)
   const fullHandle = () => {
@@ -48,31 +38,9 @@ const Main = () => {
 
   return (
     <div>
-      <input onChange={textAreaHandle} type="text" value={value}/>
-          <button onClick={findTopThree}>Start</button>
-          <button onClick={clearHandle}>Clear</button>
-          {/* <p>The word with longest length is <span className="long-length">{find}</span> with length equile to
-
-          {elmar[0]!==undefined &&
-            <span className="long-length">{find.length}</span>
-          }
-
-          </p> */}
-          <table>
-            <tr>
-              <th>Word</th>
-              <th>Times</th>
-            </tr>
-            {elmar[0]!==undefined && elmar[0]!==null &&
-              elmar[0].map((e)=>(
-                <tr>
-                  <td>{e[0]}</td>
-                  <td>{e[1]}</td>
-                </tr>
-              )).slice(0, full)
-            }
-          </table>
-          <button onClick={fullHandle}>Show full list</button>
+      <h1>Paste the text and click to start button</h1>
+      <Text textAreaHandle={textAreaHandle} value={value} findTopThree={findTopThree} clearHandle={clearHandle} /> 
+      <Result word={elmar[0]} full={full} fullHandle={fullHandle}/> 
     </div>
   );
 };

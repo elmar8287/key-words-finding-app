@@ -1,0 +1,14 @@
+.text-area {
+  color: blue;
+  text-align: center;
+  width: 80%;
+  height: 300px;
+  margin: 4% 10% 3% 10%;
+}
+
+.button {
+  padding: 5px;
+  height: 40px;
+  width: 150px;
+  margin-left: 10px;
+}

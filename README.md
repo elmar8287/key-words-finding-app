@@ -10,7 +10,7 @@
   
 
 # The [Demo Live](https://key-words.netlify.app/) version is available
-<!-- ![screenshot1]() -->
+<img width="834" alt="Screen Shot 2022-09-02 at 16 09 54" src="https://user-images.githubusercontent.com/49064106/188139946-d1c58a9c-1e71-448e-baff-d20a6bf2760e.png">
 
 ## Project status: on going
 

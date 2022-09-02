@@ -6,7 +6,7 @@
 # Built with
 
 - React JS with functional components
-- Used [Ant Design](https://ant.design/components) for design
+- Used [Ant Design](https://ant.design/) for design
   
 
 # The [Demo Live](https://key-words.netlify.app/) version is available

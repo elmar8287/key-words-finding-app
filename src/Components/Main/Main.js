@@ -12,7 +12,7 @@ const Main = () => {
   }
 
   const [elmar, setElmar] = useState([])
-  const findTopThree = () => {
+  const findwords = () => {
     if(value) {
       let a = value
       .toString()
@@ -44,8 +44,8 @@ const Main = () => {
   return (
     <div>
       <h1 className="title">Find your key words </h1>
-      <Text textAreaHandle={textAreaHandle} value={value} findTopThree={findTopThree} clearHandle={clearHandle} /> 
-      <Button type="primary" onClick={() => {findTopThree(); setDisplay(true)}} className="button">Start</Button>
+      <Text textAreaHandle={textAreaHandle} value={value} findwords={findwords} clearHandle={clearHandle} /> 
+      <Button type="primary" onClick={() => {findwords(); setDisplay(true)}} className="button">Start</Button>
       <Button onClick={() => {clearHandle(); setDisplay(false)}} className="button">Clear</Button>
       {
         display && value &&

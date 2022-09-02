@@ -44,7 +44,7 @@ const Main = () => {
   return (
     <div>
       <h1 className="title">Find your key words </h1>
-      <Text textAreaHandle={textAreaHandle} value={value} findwords={findwords} clearHandle={clearHandle} /> 
+      <Text textAreaHandle={textAreaHandle} value={value} /> 
       <Button type="primary" onClick={() => {findwords(); setDisplay(true)}} className="button">Start</Button>
       <Button onClick={() => {clearHandle(); setDisplay(false)}} className="button">Clear</Button>
       {

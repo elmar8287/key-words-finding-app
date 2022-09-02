@@ -19,6 +19,8 @@
 
 - copy and run this command to your terminal `git clone https://github.com/elmar8287/key-words-finding-app.git`
 - switch to right directory by `cd key-words-finding-app`
+- run `npm i`
+- run `npm start`
 
 ## Author
 

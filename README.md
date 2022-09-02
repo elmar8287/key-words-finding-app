@@ -1,7 +1,7 @@
 # The key-words finding App
 
 
-### This project was built to help job seekers to find the key words for creating the correct resume summery. By pasting the text from job description, you can see how many time each word mentioned in it.
+### This project was built to help job seekers to find the keywords for creating the correct resume summary. By pasting the text from job description, you can see how many time each word mentioned in it.
 
 # Built with
 

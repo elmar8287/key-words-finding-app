@@ -6,7 +6,7 @@ import './Text.css';
 const { TextArea } = Input;
 
 const Text = (
-  { textAreaHandle, value, findTopThree, clearHandle }
+  { textAreaHandle, value }
   ) => (
   <>
     <TextArea

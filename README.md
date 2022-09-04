@@ -7,6 +7,7 @@
 
 - React JS with functional components
 - Used [Ant Design](https://ant.design/) for design
+- Netlify, for deployment
   
 
 # The [Demo Live](https://key-words.netlify.app/) version is available
